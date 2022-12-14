@@ -1,0 +1,79 @@
+﻿<Window x:Class="Practice_9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice_9"
+        mc:Ignorable="d"
+        Title="9 Рпакичетсикая" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Menu Grid.ColumnSpan="2"
+              VerticalAlignment="Top">
+
+            <MenuItem Header="О программе"
+                      Click="AboutProgramm"/>
+
+            <MenuItem Header="Выход"
+                      Click="Exit"/>
+        </Menu>
+
+        <DataGrid Grid.ColumnSpan="2"
+                  Margin="0,20,0,0"
+                  x:Name="structGrid"/>
+
+        <GroupBox Grid.Row="2">
+            <Grid>
+                <Label Content="Название" 
+                       Margin="25,10,293,174"/>
+
+                <Label Content="Жанр" 
+                       Margin="45,40,293,144"/>
+
+                <Label Content="Год" 
+                       Margin="58,70,293,114"/>
+
+                <Label Content="Длительность" 
+                       Margin="5,101,293,83"/>
+
+                <TextBox Margin="100,10,105,174"
+                         x:Name="film"/>
+
+                <TextBox Margin="100,40,105,144"
+                         x:Name="genre"/>
+
+                <TextBox Margin="100,70,105,114"
+                         x:Name="year"/>
+
+                <TextBox Margin="100,100,105,84"
+                         x:Name="duration"/>
+
+                <Button Margin="98,130,106,54"
+                        Content="Добавить"
+                        Click="Add"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Row="1"
+                  Grid.Column="2"
+                  Header="Прочее">
+            <Grid>
+                <TextBox Margin="10,10,10,150"
+                         x:Name="Janre"/>
+                
+                <Button Margin="10,61,10,97"
+                        Content="Выбрать жанр"
+                        Click="Genre"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>
